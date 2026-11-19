@@ -1,0 +1,19 @@
+include:
+  - board: bmp_boost
+    shield: torabo_tsuki_lp_left
+    snippet: "studio-rpc-usb-uart kscan-4-direction-switch"
+    cmake-args: >-
+      -DCONFIG_ZMK_NEMU_LINK_PERIPHERAL_ID=0
+      -DCONFIG_ZMK_NEMU_LINK_MODE_SWITCH=y
+    artifact-name: torabo_tsuki_lp_left_peripheral
+  - board: bmp_boost
+    shield: torabo_tsuki_lp_right
+    snippet: "studio-rpc-usb-uart split-central input-trackball input-listener input-split-listener kscan-4-direction-switch-central"
+    cmake-args: >-
+      -DCONFIG_ZMK_NEMU_LINK_PERIPHERAL_ID=1
+      -DCONFIG_ZMK_NEMU_LINK_MODE_SWITCH=y
+    artifact-name: torabo_tsuki_lp_right_central
+  - board: nemu-link-dongle
+    artifact-name: nemu-link-dongle
+  - board: bmp_boost
+    shield: settings_reset

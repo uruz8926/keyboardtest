@@ -1,0 +1,7 @@
+/*
+ * nemu-link dongle: runs the very same keymap as the keyboard halves.
+ * While in 2.4GHz mode all key events are processed here, so layers,
+ * combos, macros and &nl_mode behave exactly like in BLE mode.
+ */
+#define NEMU_LINK_DONGLE
+#include "keymap.keymap"

@@ -1,0 +1,43 @@
+manifest:
+  remotes:
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+    - name: sekigon-gonnoc
+      url-base: https://github.com/sekigon-gonnoc
+    - name: uruz8926
+      url-base: https://github.com/uruz8926
+  projects:
+    - name: zmk
+      remote: sekigon-gonnoc
+      revision: v0.4+nemu-link
+      import: app/west.yml
+    - name: zmk-feature-nemu-link
+      remote: sekigon-gonnoc
+      revision: zmk-v0.4
+      import: config/west.yml
+    - name: zmk-component-bmp-boost
+      remote: sekigon-gonnoc
+      import: west.yml
+      revision: master
+    - name: zmk-feature-status-led
+      remote: sekigon-gonnoc
+      revision: main
+    - name: zmk-driver-paw3222
+      remote: sekigon-gonnoc
+      revision: torabo-tsuki-nemu-link
+    - name: zmk-driver-iqs7211e
+      remote: uruz8926
+      revision: master
+    - name: zmk-feature-cdc-acm-bootloader-trigger
+      remote: sekigon-gonnoc
+      revision: main
+    - name: zmk-feature-non-lipo-battery-management
+      remote: sekigon-gonnoc
+      revision: main
+    - name: zmk-driver-kscan-4-direction-switch
+      remote: sekigon-gonnoc
+  self:
+    path: config
+boards:
+  - name: bmp_boost
+    shield: torabo_tsuki_lp

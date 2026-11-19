@@ -1,0 +1,27 @@
+#include "torabo_tsuki_lp.dtsi"
+#include <input/processors.dtsi>
+#include <dt-bindings/zmk/input_transform.h>
+
+&pointing_listener {
+    input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
+};
+
+/* --- nemu-link: key storage partition (BMP Boost layout) --- */
+&code_partition {
+    reg = <0x00026000 0x000b1000>;
+};
+
+&flash0 {
+    partitions {
+        nemu_link_key_partition: partition@d7000 {
+            label = "nemu_link_key";
+            reg = <0x000d7000 0x00001000>;
+        };
+    };
+};
+
+/ {
+    nemu_link_split {
+        compatible = "sekigon,nemu-link-radio";
+    };
+};
