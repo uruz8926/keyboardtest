@@ -126,8 +126,9 @@
 
     /*
      * zip_xy_scaler N M = multiply movement by N/M.
-     * BLE uses the raw sensor value (1x); the 2.4GHz path arrives smaller,
-     * so scale it up here. Tune N M until it feels the same as BLE.
+     * 1 1 (no scaling) matches BLE now that the right half polls the sensor
+     * at 8 ms over 2.4GHz and merges motion instead of dropping it.
+     * Raise N only if it still feels slower than BLE.
      */
     trackball_proxy_listener {
         compatible = "zmk,input-listener";
