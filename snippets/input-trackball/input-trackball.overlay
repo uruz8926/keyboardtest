@@ -17,4 +17,4 @@
         res-cpi = <650>;
     };
 };
-        poll-interval-esb-ms = <8>;
+poll-interval-esb-ms = <8>;
