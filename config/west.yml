@@ -9,33 +9,34 @@ manifest:
   projects:
     - name: zmk
       remote: sekigon-gonnoc
-      revision: v0.4+nemu-link
+      revision: c2db9b12bf20b8cb7e938fe414d3347ed55a21a1 # v0.4+nemu-link
       import: app/west.yml
     - name: zmk-feature-nemu-link
       remote: sekigon-gonnoc
-      revision: zmk-v0.4
+      revision: c9e735b170e77c34744113473d4889ffb96be8af # zmk-v0.4
       import: config/west.yml
     - name: zmk-component-bmp-boost
       remote: sekigon-gonnoc
       import: west.yml
-      revision: master
+      revision: 2f5567523b6f0bc39575d48ed746ed9d635edf8b # master
     - name: zmk-feature-status-led
       remote: sekigon-gonnoc
-      revision: main
+      revision: 6ad3fc6d5e673ced58478a1ea6bcf5cfb68cc959 # main
     - name: zmk-driver-paw3222
       remote: sekigon-gonnoc
-      revision: torabo-tsuki-nemu-link
+      revision: f5cef51c7b074d5abf4149ef6fd4690483f90ebe # torabo-tsuki-nemu-link
     - name: zmk-driver-iqs7211e
       remote: uruz8926
-      revision: master
+      revision: ba9883927e948b9937af1ad68e5de56d86067f92 # master
     - name: zmk-feature-cdc-acm-bootloader-trigger
       remote: sekigon-gonnoc
-      revision: main
+      revision: 37ca1ef9e42d62040387590542585da033d12571 # main
     - name: zmk-feature-non-lipo-battery-management
       remote: sekigon-gonnoc
-      revision: main
+      revision: 43fa56fb7d1e065393e926b6caa0ea02cb86eca7 # main
     - name: zmk-driver-kscan-4-direction-switch
       remote: sekigon-gonnoc
+      revision: 2329edb80a589fdf4245b4edace0e9c1d3424b83
   self:
     path: config
 boards:
