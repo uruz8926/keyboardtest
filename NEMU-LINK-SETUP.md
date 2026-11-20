@@ -64,8 +64,8 @@
   - `zmk-driver-paw3222`: `torabo-tsuki-nemu-link` ブランチ
   - `zmk-feature-cdc-acm-bootloader-trigger`: `main`
   - `zmk-driver-iqs7211e`(トラックパッド)、`zmk-feature-status-led`、`kscan-4-direction-switch`: 変更なし
-- `config/boards/arm/bmp_boost/` は旧形式のボード定義です。ビルドで衝突したらフォルダごと削除してください。
-- 鍵保存partition(`0xd7000`, 4KiB)は、nemu-link README記載のBMP Boost用の値です(BMP Boost `master` の `code_partition` と一致)。
+- `config/boards/arm/bmp_boost/`(旧形式のボード定義)は削除済みです。
+- - 鍵保存partition(`0xd7000`, 4KiB)は、nemu-link README記載のBMP Boost用の値です(BMP Boost `master` の `code_partition` と一致)。
 - ドングル側のトラックボールは、右側の `pointing_listener` がESBへ送る前提(listener index 0 = reg 0)で組んでいます。
   トラックボールがドングル経由で動かないときは、nemu-linkの `sekigon,nemu-link-input-reg` で対応づけを調整します。
 - 右側は「BLE時はセントラル / 2.4GHz時はペリフェラル」の両方になるため、`CONFIG_ZMK_USB=y` を右に足しています。
