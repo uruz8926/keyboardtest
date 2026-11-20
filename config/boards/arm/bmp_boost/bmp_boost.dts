@@ -1,6 +1,0 @@
-#include <nrf52840.dtsi>
-
-/ {
-    model = "BMP Boost";
-    compatible = "bmp,boost";
-};
